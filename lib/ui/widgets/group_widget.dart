@@ -20,17 +20,19 @@ class _GroupWidgetState extends State<GroupWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
         key: const ValueKey("groupsScaffold"),
-        body: const Center(
-          // TODO
-          child: Text(
-              'Aquí colocar la lista de grupos, recordar que se se debe escuchar el controlador (groups) con obx'),
+        body: Obx(
+          () => ListView.builder(
+              itemCount: firebaseController.groups.length,
+              padding: EdgeInsets.only(top: 20.0),
+              itemBuilder: (BuildContext context, int index) {
+                return _buildItem(context, firebaseController.groups[index]);
+              }),
         ),
         floatingActionButton: FloatingActionButton(
           key: const ValueKey("addGroupAction"),
           child: const Icon(Icons.add),
           onPressed: () {
-            // TODO
-            logInfo('Aqui navegar a AddGroupPage');
+            Get.to(() => const AddGroupPage());
           },
         ));
   }

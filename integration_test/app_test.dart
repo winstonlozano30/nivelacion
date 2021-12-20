@@ -116,7 +116,7 @@ void main() {
       await tester.tap(loginAction);
 
       await tester.pumpAndSettle();
-      await tester.pump(const Duration(seconds: 1));
+      await tester.pump(const Duration(seconds: 3));
 
       expect(groupsScaffold, findsOneWidget);
       expect(addGroupAction, findsOneWidget);
