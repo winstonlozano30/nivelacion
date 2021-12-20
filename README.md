@@ -13,7 +13,7 @@ Este proyecto trabaja las funcionalidades de Firestore y autenticación de Fireb
 Pista: Revisar los comentarios TODO   
 
 Integrantes:
-Winston Andres Lozano Rodriguez
+Winston Andres Lozano Rodriguez, 
 Camilo Guerrero Gutierrez
 
 Un repositorio público con la solución: https://github.com/winstonlozano30/nivelacion.git
